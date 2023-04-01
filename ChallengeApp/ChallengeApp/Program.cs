@@ -14,7 +14,6 @@ int counter8 = 0;
 int counter9 = 0;
 
 
-
 foreach (char letter in letters)
 {
     if (letter == '0')
