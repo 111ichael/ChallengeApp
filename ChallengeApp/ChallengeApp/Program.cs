@@ -2,7 +2,7 @@
 
 Employee employee1 = new Employee("Michał", "Musiał", 27);           
 Employee employee2 = new Employee("Monika", "Kowalska", 44);
-Employee employee3 = new Employee("Aleksandra", "Masłowska", 32);
+Employee employee3 = new Employee("Aleksandra", "Dygas", 32);
 
 employee1.AddScore(5);
 employee1.AddScore(4);
