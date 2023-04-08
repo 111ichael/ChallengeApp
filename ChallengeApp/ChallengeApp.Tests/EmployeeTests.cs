@@ -1,6 +1,14 @@
+<<<<<<< HEAD
 namespace ChallengeApp.Tests
 {
     public class EmployeeTests
+=======
+using System.Reflection.Metadata;
+
+namespace ChallengeApp.Tests
+{
+    public class Tests
+>>>>>>> 8fa37b1049ece11c8b087b1b8df8b542e0b99344
     {
         [Test]
         public void WhenEmplyeeCollectThreeScores_ShouldCorrectResult()
