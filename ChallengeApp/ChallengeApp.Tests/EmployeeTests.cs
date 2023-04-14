@@ -1,29 +1,55 @@
-<<<<<<< HEAD
-namespace ChallengeApp.Tests
+﻿namespace ChallengeApp.Tests
 {
     public class EmployeeTests
-=======
-using System.Reflection.Metadata;
-
-namespace ChallengeApp.Tests
-{
-    public class Tests
->>>>>>> 8fa37b1049ece11c8b087b1b8df8b542e0b99344
     {
         [Test]
-        public void WhenEmplyeeCollectThreeScores_ShouldCorrectResult()
-        { 
-            //arrange
-            var employee = new Employee("Micha�", "Musia�", 27);
-            employee.AddScore(5);
-            employee.AddScore(4);
-            employee.AddScore(-9);
-            //act
-            var result = employee.Result;
+        public void GetStatisticsShouldReturnEmployeeMaxGrade()
+        {
+            var employee = new Employee("Michał", "Musiał");
 
-            //assert
-            Assert.AreEqual(0, result);
+            employee.AddGrade(5);
+            employee.AddGrade(8);
+            employee.AddGrade(7);
+
+            var statistics = employee.GetStatistics();
+
+            Assert.AreEqual(8, statistics.Max);
+        }
+
+        [Test]
+
+        public void GetStatisticsShouldReturnEmployeeMinGrade()
+        {
+            {
+                var employee = new Employee("Michał", "Musiał");
+
+                employee.AddGrade(5);
+                employee.AddGrade(8);
+                employee.AddGrade(7);
+
+                var statistics = employee.GetStatistics();
+
+                Assert.AreEqual(5, statistics.Min);
+            }
+        }
+
+        [Test]
+
+        public void GetStatisticsShouldReturnEmployeeAverageGrade()
+        {
+            {
+                var employee = new Employee("Michał", "Musiał");
+
+                employee.AddGrade(5);
+                employee.AddGrade(8);
+                employee.AddGrade(7);
+
+                var statistics = employee.GetStatistics();
+
+                Assert.AreEqual(6.67, statistics.Average, 0.01);
+            }
 
         }
+
     }
 }
