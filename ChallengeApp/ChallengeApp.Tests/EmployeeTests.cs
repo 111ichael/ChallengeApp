@@ -17,7 +17,6 @@
         }
 
         [Test]
-
         public void GetStatisticsShouldReturnEmployeeMinGrade()
         {
             {
@@ -34,7 +33,6 @@
         }
 
         [Test]
-
         public void GetStatisticsShouldReturnEmployeeAverageGrade()
         {
             {
